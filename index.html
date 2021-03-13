@@ -58,14 +58,12 @@ body {
   margin: 0px 45px;
   border-radius: 4px;
   border: 1px solid #CCC;
-
 }
 
 .btn.btn-success{
   margin: 0px 15px;
 }
-#finalroster{
-
+#finalroster  {
   margin: 0px 5px;
   border-radius: 4px;
   border: 1px solid #CCC;
@@ -92,7 +90,7 @@ pre  {
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="index.js"></script>
+<script src="/static/js/index.js"></script>
 <script>
     $(document).ready(function () {
     function isMobile() {
@@ -110,7 +108,11 @@ pre  {
         document.getElementById('tag').setAttribute('size',25);
         document.getElementById('captain').setAttribute('size',25);
     }
-    })
+    }
+    )
+</script>
+<script>
+
 </script>
 
 </head>
@@ -119,43 +121,51 @@ pre  {
 <!--        Roster: P1. asd | asda| <@> P2. | | <@> P3. | | <@> P4. | | <@>-->
             <div id="main">
       <form class="mainform">
-        <img class="logo" src="registr.png" width="450", height="200" >
+        <img class="logo" src="/static/img/registr.png" width="450", height="200" >
         <input type="text" id="name"  placeholder="Your team name.." size="90">
         <input type="text" id="tag"  placeholder="Your team tag.." size="90">
         <label for="captain" class="captain_label">Write DISCORD id</label>
         <input type="text"   id="captain" id="captain" placeholder="Id captain" size="90">
 
-        <div class="rosterinfo">
+        <div class="rosterinfo" id="rosterinfo">
             <label>Roster</label>
             <div id="playerinfo1" class="inputplayer">
-                <input type="text"  class="player" placeholder="Game name" size="25" >
-                <input type="text"  class="player"  placeholder="Game id"  size="25">
-                <input type="text"  class="player"  placeholder="Discord id" size="25">
+                <input type="text" placeholder="Game name" size="25" >
+                <input type="text" placeholder="Game id"  size="25">
+                <input type="text" placeholder="Discord id" size="25">
             </div>
             <div id="playerinfo2" class="inputplayer">
-                <input type="text"  class="player" placeholder="Game name" size="25" >
-                <input type="text"  class="player"  placeholder="Game id" size="25">
-                <input type="text"  class="player"  placeholder="Discord id" size="25">
+                <input type="text" placeholder="Game name" size="25" >
+                <input type="text" placeholder="Game id" size="25">
+                <input type="text" placeholder="Discord id" size="25">
             </div>
             <div id="playerinfo3" class="inputplayer">
-                <input type="text"  class="player"placeholder="Game name" size="25" >
-                <input type="text"  class="player" placeholder="Game id" size="25">
-                <input type="text"  class="player" placeholder="Discord id" size="25">
+                <input type="text" placeholder="Game name" size="25" >
+                <input type="text" placeholder="Game id" size="25">
+                <input type="text" placeholder="Discord id" size="25">
             </div>
             <div id="playerinfo4" class="inputplayer">
-                <input type="text"  class="player" placeholder="Game name" size="25">
-                <input type="text"  class="player"  placeholder="Game id" size="25" >
-                <input type="text"  class="player"  placeholder="Discord id" size="25">
+                <input type="text" placeholder="Game name" size="25">
+                <input type="text" placeholder="Game id" size="25" >
+                <input type="text" placeholder="Discord id" size="25">
             </div>
         </div>
-          <button id="done" class="btn btn-success">Done</button>
-      <label>P.S Все Discord Id можно запросить у нашего бота в ❖》fun-room через команду : ?id @tag</label>
+          <button id="add-field" class="btn btn-success">Add field</button>
+          <div>
+            <button id="done" class="btn btn-success">Done</button>
+            <label>P.S Все Discord Id можно запросить у нашего бота в ❖》fun-room через команду : ?id @tag</label>
+         </div>
       </form>
     </div>
+
     <div class="card" >
+            <div class="card-header">
+                Скопируйте свой  готовый ростер
+            </div>
             <div class="card-block" id="card-block">
             </div>
     </div>
+
 
 </body>
 </html>
